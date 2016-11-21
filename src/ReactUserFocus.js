@@ -10,16 +10,21 @@ class ReactUserFocus extends React.Component {
 
 	constructor(props){
 		super(props);
+		// Set the visibility change event based on the browser.
+		this.isHidden;
 		this.visibilityChange;
-	    if (typeof document.hidden !== 'undefined') {
-	        this.visibilityChange = 'visibilitychange';
-	    } else if (typeof document.mozHidden !== 'undefined') {
-	        this.visibilityChange = 'mozvisibilitychange';
-	    } else if (typeof document.msHidden !== 'undefined') {
-	        this.visibilityChange = 'msvisibilitychange';
-	    } else if (typeof document.webkitHidden !== 'undefined') {
-	        this.visibilityChange = 'webkitvisibilitychange';
-	    }
+		if (typeof document.hidden !== 'undefined') {
+  			this.isHidden = 'hidden';
+  			this.visibilityChange = 'visibilitychange';
+		} else if (typeof document.msHidden !== 'undefined') {
+  			this.isHidden = 'msHidden';
+  			this.visibilityChange = 'msvisibilitychange';
+		} else if (typeof document.webkitHidden !== 'undefined') {
+  			this.isHidden = 'webkitHidden';
+  			this.visibilityChange = 'webkitvisibilitychange';
+		}
+
+		this.checkFocusVis = this.checkFocusVis.bind(this);
 	}
 
 	checkFocus() {
@@ -29,7 +34,11 @@ class ReactUserFocus extends React.Component {
 
 	checkFocusVis() {
 		console.log('From Visibility API');
-		console.log(document.hasFocus());
+		if (document[this.isHidden]) {
+    		console.log('hidden');
+  		} else {
+    		console.log('visible');
+  		}
 	}
 
 	componentWillMount() {
