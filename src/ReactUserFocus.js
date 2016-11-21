@@ -6,8 +6,16 @@ class ReactUserFocus extends React.Component {
 
 	constructor(props){
 		super(props);
-		this.isSupported = typeof document !== 'undefined' && Boolean(document.addEventListener);
-		console.log(document.hasFocus());
+		this.visibilityChange;
+	    if (typeof document.hidden !== 'undefined') {
+	        this.visibilityChange = 'visibilitychange';
+	    } else if (typeof document.mozHidden !== 'undefined') {
+	        this.visibilityChange = 'mozvisibilitychange';
+	    } else if (typeof document.msHidden !== 'undefined') {
+	        this.visibilityChange = 'msvisibilitychange';
+	    } else if (typeof document.webkitHidden !== 'undefined') {
+	        this.visibilityChange = 'webkitvisibilitychange';
+	    }
 	}
 
 	checkFocus() {
@@ -15,27 +23,16 @@ class ReactUserFocus extends React.Component {
 	}
 
 	componentWillMount() {
-		var visibilityChange;
-	    if (typeof document.hidden !== 'undefined') {
-	        visibilityChange = 'visibilitychange';
-	    } else if (typeof document.mozHidden !== 'undefined') {
-	        visibilityChange = 'mozvisibilitychange';
-	    } else if (typeof document.msHidden !== 'undefined') {
-	        visibilityChange = 'msvisibilitychange';
-	    } else if (typeof document.webkitHidden !== 'undefined') {
-	        visibilityChange = 'webkitvisibilitychange';
-	    }
-		document.addEventListener(visibilityChange, this.checkFocus);
+		console.log(this.visibilityChange);
+		document.addEventListener(this.visibilityChange, this.checkFocus);
 		window.addEventListener('focus', this.checkFocus);
 		window.addEventListener('blur', this.checkFocus);
     }
 
 	componentWillUnmount() {
-        if (!this.isListening) {
-            return;
-        }
-        document.removeEventListener(visibility.event, this.handleVisibilityChange);
-		console.log('Remove visiability listener');
+		document.removeEventListener(this.visibilityChange, this.checkFocus);
+		window.removeEventListener('focus', this.checkFocus);
+		window.removeEventListener('blur', this.checkFocus);
     }
 
 	render() {
