@@ -28,16 +28,18 @@ class ReactUserFocus extends React.Component {
 	}
 
 	checkFocus() {
-		console.log('From focus/blur');
-		console.log(document.hasFocus());
+		// console.log('From focus/blur');
+		// console.log(document.hasFocus());
 	}
 
 	checkFocusVis() {
 		console.log('From Visibility API');
-		if (document[this.isHidden]) {
-    		console.log('hidden');
+		console.log(document[this.isHidden]);
+		console.log(document.hasFocus());
+		if (document[this.isHidden] || document.hasFocus()) {
+			this.props.onChange(true);
   		} else {
-    		console.log('visible');
+    		this.props.onChange(false);
   		}
 	}
 
@@ -54,7 +56,6 @@ class ReactUserFocus extends React.Component {
     }
 
 	render() {
-			console.log(this.props.isHidden);
 	        if (!this.props.children) {
 	            return null;
 	        }
@@ -65,11 +66,11 @@ class ReactUserFocus extends React.Component {
 }
 
 ReactUserFocus.defaultProps = {
-	isHidden: false,
+	onChange: function(isHidden) { console.log(isHidden);},
 };
 
 ReactUserFocus.propTypes = {
-	isHidden: React.PropTypes.bool.isRequired,
+	onChange: React.PropTypes.func.isRequired,
 };
 
 export default ReactUserFocus;
