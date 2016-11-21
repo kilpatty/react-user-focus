@@ -20,7 +20,9 @@
     "gulp": "^3.9.0",
     "react": "^0.14.0",
     "react-component-gulp-tasks": "^0.7.6",
-    "react-dom": "^0.14.0"
+    "react-dom": "^0.14.0",
+    "webpack": "2.1.0-beta.27",
+    "webpack-dev-server": "v2.1.0-beta.11"
   },
   "scripts": {
     "build": "gulp clean && NODE_ENV=production gulp build",
@@ -34,6 +36,7 @@
   },
   "keywords": [
     "react",
+    "reactjs",
     "react-component"
   ]
 }
