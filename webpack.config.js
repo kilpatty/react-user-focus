@@ -8,10 +8,16 @@ module.exports = {
 
   output: {
     path: path.join(__dirname),
-    filename: '<%= slug %>.js',
+    filename: 'react-user-focus.js',
     libraryTarget: 'umd',
-    library: '<%= libname %>'
+    library: 'reactUserFocus'
   },
+
+output: {
+  path: path.join(__dirname, 'dist'),
+  publicPath: '/',
+  filename: '[hash].bundle.js',
+},
 
   externals: {
    'react': 'var React',
@@ -20,13 +26,6 @@ module.exports = {
 
   module: {
     loaders: [
-      {
-        test: /\.scss$/,
-        // Query parameters are passed to node-sass
-        loader: 'style!css!sass?outputStyle=expanded&' +
-          'includePaths[]=' + (path.resolve(__dirname, './bower_components')) + '&' +
-          'includePaths[]=' + (path.resolve(__dirname, './node_modules'))
-      },
       {
         test: /(\.js)|(\.jsx)$/,
         exclude: /node_modules/,
