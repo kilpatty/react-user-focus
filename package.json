@@ -29,6 +29,9 @@
     "webpack": "2.1.0-beta.27",
     "webpack-dev-server": "v2.1.0-beta.11"
   },
+  "peerDependencies": {
+    "react": "^0.14.x"
+  },
   "scripts": {
     "build": "webpack -p",
     "examples": "gulp dev:server",
