@@ -10,7 +10,7 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     filename: 'index.js',
     libraryTarget: 'umd',
-    library: 'ReactUserFocus'
+    library: ''
   },
   externals: {
     react: {
