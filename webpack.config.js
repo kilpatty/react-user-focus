@@ -7,22 +7,20 @@ module.exports = {
   entry: './lib/ReactUserFocus.js',
 
   output: {
-    path: path.join(__dirname),
-    filename: 'ReactUserFocus.js',
+    path: path.join(__dirname, 'dist'),
+    filename: 'index.js',
     libraryTarget: 'umd',
-    library: 'reactUserFocus'
+    library: 'ReactUserFocus'
   },
   externals: {
    'react': 'var React',
    'react/addons': 'var React'
-  },
-
+ },
   module: {
-    loaders: [
+    rules: [
       {
-        test: /(\.js)|(\.jsx)$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader'
+        test: /\.js$/,
+        use: ['babel']
       }
     ]
   }
