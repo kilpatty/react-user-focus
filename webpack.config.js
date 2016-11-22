@@ -13,8 +13,7 @@ module.exports = {
     library: 'ReactUserFocus'
   },
   externals: {
-   'react': 'var React',
-   'react/addons': 'var React'
+   'react': 'React'
  },
   module: {
     rules: [
