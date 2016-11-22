@@ -22,10 +22,8 @@
     "babel-preset-stage-0": "^6.16.0",
     "eslint": "^1.6.0",
     "eslint-plugin-react": "^3.5.1",
-    "gulp": "^3.9.0",
-    "react": "^0.14.0",
-    "react-component-gulp-tasks": "^0.7.6",
-    "react-dom": "^0.14.0",
+    "react": "15.4.0",
+    "react-dom": "15.4.0",
     "webpack": "2.1.0-beta.27",
     "webpack-dev-server": "v2.1.0-beta.11"
   },
