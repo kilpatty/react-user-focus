@@ -13,8 +13,9 @@ module.exports = {
     library: 'ReactUserFocus'
   },
   externals: {
-   'react': 'React'
- },
+  'react': 'react',
+  'react-dom': 'react-dom'
+  },
   module: {
     rules: [
       {
