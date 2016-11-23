@@ -1,6 +1,6 @@
 # react-user-focus
 
-__COMPONENT DESCRIPTION GOES HERE__
+react-user-focus is a Reactjs component that communicates the state of the user's focus (active, idle, away). The purpose of this component is to allow user dependent processes such as animations, and communication to be aware of the current state of the user's focus.
 
 
 ## Demo & Examples
@@ -58,4 +58,3 @@ To build, watch and serve the examples (which will also watch the component sour
 __PUT LICENSE HERE__
 
 Copyright (c) 2016 Sean Kilgarriff.
-
