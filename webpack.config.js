@@ -4,7 +4,7 @@ var path = require('path');
 
 module.exports = {
   context: path.join(__dirname),
-  entry: './lib/ReactUserFocus.js',
+  entry: './lib/index.js',
 
   output: {
     path: path.join(__dirname, 'dist'),
