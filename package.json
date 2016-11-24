@@ -13,6 +13,9 @@
   "bugs": {
     "url": "https://github.com/Skilgarriff/react-user-focus/issues"
   },
+  "files": [
+    "dist/index.js"
+  ],
   "dependencies": {
     "babel-core": "^6.18.2",
     "babel-eslint": "^4.1.3",
