@@ -5,7 +5,7 @@ react-user-focus is a Reactjs component that communicates the state of the user'
 
 ## Demo & Examples
 
-Live demo - To see a live demo of this component, visit my website: [SeanKilgarriff.com](https://seankilgarriff.com). Open up the console in developer tools, and type UserFocusDemo() into the console. 
+Live demo - To see a live demo of this component, visit my website: [SeanKilgarriff.com](https://seankilgarriff.com). Open up the console in developer tools, and type UserFocusDemo() into the console.
 
 To build the examples locally, run:
 
@@ -55,6 +55,6 @@ To build, watch and serve the examples (which will also watch the component sour
 
 ## License
 
-__PUT LICENSE HERE__
+This repository is covered by the [MIT License](/LICENSE)
 
 Copyright (c) 2016 Sean Kilgarriff.
