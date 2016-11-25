@@ -5,24 +5,38 @@ react-user-focus is a Reactjs component that communicates the state of the user'
 
 ## Installation
 
-The easiest way to use react-user-focus is to install it from NPM and include it in your own React build process (using [Browserify](http://browserify.org), [Webpack](http://webpack.github.io/), etc).
-
-You can also use the standalone build by including `dist/react-user-focus.js` in your page. If you use this, make sure you have already included React, and it is available as a global variable.
+The easiest way to use react-user-focus is to install it from NPM or Yarn and include it in your own React build process (using [Browserify](http://browserify.org), [Webpack](http://webpack.github.io/), etc).
 
 ```
 npm install react-user-focus --save
 ```
 
+or
+
+```
+yarn add react-user-focus
+```
+
 
 ## Usage
-
-__EXPLAIN USAGE HERE__
 
 ```
 var ReactUserFocus = require('react-user-focus');
 
 <ReactUserFocus>Example</ReactUserFocus>
 ```
+
+react-user-focus currently has 3 properties can that can be included when rendering the component.
+
++ onFocusChange - accepts a function that is called with the parameter of isHidden.
+
+put code examples on each one of these.
+
++ onIdleChange - accepts a function that is called with the parameter of isIdle
+
++ idleTime - the amount of time to set a user to idle (in seconds)
+
+
 
 
 ## Demo & Examples
