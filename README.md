@@ -20,21 +20,52 @@ yarn add react-user-focus
 
 ## Usage
 
-```
-var ReactUserFocus = require('react-user-focus');
+react-user-focus can contain children, or be rendered simply by itself.
 
-<ReactUserFocus>Example</ReactUserFocus>
 ```
+import ReactUserFocus from 'react-user-focus';
+
+<ReactUserFocus
+  onFocusChange={onFocusChange}
+  onIdleChange={onIdleChange}
+  idleTime={2}
+/>
+```
+
+### Properties
 
 react-user-focus currently has 3 properties can that can be included when rendering the component.
 
 + onFocusChange - accepts a function that is called with the parameter of isHidden.
 
-put code examples on each one of these.
+```
+import ReactUserFocus from 'react-user-focus';
+
+function onFocusChange(isHidden) {
+  console.log(`Is hidden?:${isHidden}`);
+}
+
+<ReactUserFocus
+  onFocusChange={onFocusChange}
+/>
+```
 
 + onIdleChange - accepts a function that is called with the parameter of isIdle
 
 + idleTime - the amount of time to set a user to idle (in seconds)
+
+```
+import ReactUserFocus from 'react-user-focus';
+
+function onIdleChange(isIdle) {
+  console.log(`Is Idle?:${isIdle}`);
+}
+
+<ReactUserFocus
+  onIdleChange={onIdleChange}
+  idleTime={2}
+/>
+```
 
 
 
@@ -51,11 +82,6 @@ npm start
 ```
 
 Then open [`localhost:8000`](http://localhost:8000) in a browser.
-
-
-### Properties
-
-* __DOCUMENT PROPERTIES HERE__
 
 ### Notes
 
