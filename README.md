@@ -1,6 +1,6 @@
 # react-user-focus
 
-react-user-focus is a Reactjs component that communicates the state of the user's focus (active, idle, away). The purpose of this component is to allow user dependent processes such as animations, and communication to be aware of the current state of the user's focus.
+react-user-focus is a Reactjs component that communicates the state of the user's focus (focused, idle, away). The purpose of this component is to allow user-dependent processes such as animations, and communication to be aware of the current state of the user's focus.
 
 
 ## Installation
@@ -36,7 +36,7 @@ import ReactUserFocus from 'react-user-focus';
 
 react-user-focus currently has 3 properties can that can be included when rendering the component.
 
-+ onFocusChange - accepts a function that is called with the parameter of isHidden.
++ onFocusChange - accepts a function that is called with the parameter of isHidden when the focus of the user changes.
 
 ```
 import ReactUserFocus from 'react-user-focus';
@@ -50,9 +50,9 @@ function onFocusChange(isHidden) {
 />
 ```
 
-+ onIdleChange - accepts a function that is called with the parameter of isIdle
++ onIdleChange - accepts a function that is called with the parameter of isIdle when the idleness of a user changes.
 
-+ idleTime - the amount of time to set a user to idle (in seconds)
++ idleTime - the amount of time (in seconds) with no engagement to consider a user as idle.
 
 ```
 import ReactUserFocus from 'react-user-focus';
@@ -68,11 +68,9 @@ function onIdleChange(isIdle) {
 ```
 
 
-
-
 ## Demo & Examples
 
-Live demo - To see a live demo of this component, visit my website: [SeanKilgarriff.com](https://seankilgarriff.com). Open up the console in developer tools, and type UserFocusDemo() into the console.
+Live demo - To see a live demo of this component, visit my website: [SeanKilgarriff.com](https://seankilgarriff.com). Open up the console in developer tools, and type AmIFocused?() into the console.
 
 To build the examples locally, run:
 

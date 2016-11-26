@@ -44,18 +44,12 @@
     "build": "webpack -p",
     "prepublish": "npm run build",
     "lint": "eslint ./; true",
-    "publish:site": "NODE_ENV=production gulp publish:examples",
-    "release": "NODE_ENV=production gulp release",
-    "start": "gulp dev",
-    "test": "echo \"no tests yet\" && exit 0",
-    "watch": "gulp watch:lib"
+    "start": "webpack-dev-server --config webpack.config.dev.js",
+    "test": "echo \"no tests yet\" && exit 0"
   },
   "keywords": [
     "react",
     "reactjs",
     "react-component"
-  ],
-  "devDependencies": {
-    "babel-plugin-add-module-exports": "^0.2.1"
-  }
+  ]
 }
