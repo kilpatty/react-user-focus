@@ -70,7 +70,7 @@ function onIdleChange(isIdle) {
 
 ## Demo & Examples
 
-Live demo - To see a live demo of this component, visit my website: [SeanKilgarriff.com](https://seankilgarriff.com). Open up the console in developer tools, and type AmIFocused?() into the console.
+Live demo - To see a live demo of this component, visit my website: [SeanKilgarriff.com](https://seankilgarriff.com). Open up the console in developer tools, and type amIFocused() into the console.
 
 To build the examples locally, run:
 
