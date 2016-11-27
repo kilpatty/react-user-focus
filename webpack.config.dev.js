@@ -1,17 +1,17 @@
 /* jshint node: true */
 var path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
   context: path.join(__dirname),
+  devtool: 'cheap-eval-source-map',
   entry: './example/src/example.js',
 
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'index.js',
-    library: '',
-    libraryTarget: 'commonjs2'
   },
   module: {
     rules: [
@@ -23,6 +23,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: './example/src/index.html',
     }),
