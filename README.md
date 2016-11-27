@@ -79,7 +79,7 @@ npm install
 npm start
 ```
 
-Then open [`localhost:8000`](http://localhost:8000) in a browser.
+Then open [`localhost:8080`](http://localhost:8080) in a browser. If you have other webpack dev servers running, the ports will be incremental - 8081, 8082, etc.
 
 
 ## License
