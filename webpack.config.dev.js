@@ -7,7 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   context: path.join(__dirname),
   devtool: 'cheap-eval-source-map',
-  entry: './example/src/example.js',
+  entry: './example/example.js',
 
   output: {
     path: path.join(__dirname, 'dist'),
@@ -25,7 +25,7 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: './example/src/index.html',
+      template: './example/index.html',
     }),
   ],
   devServer: {
