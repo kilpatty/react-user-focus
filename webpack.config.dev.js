@@ -1,5 +1,6 @@
 /* jshint node: true */
 var path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 module.exports = {
@@ -21,6 +22,11 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './example/src/index.html',
+    }),
+  ],
   devServer: {
     hot: true,
     historyApiFallback: true,

@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var ReactUserFocus = require('react-user-focus');
+import ReactUserFocus from '../../lib/index.js'
 
 var App = React.createClass({
 	render () {
